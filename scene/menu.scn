@@ -1,0 +1,38 @@
+scene
+{
+	name: menu
+	beginLoaded: true
+	lighting
+	{
+		light
+		{
+			name: omni
+			pos: 0.000000, 2.000000, 0.000000
+			dir: 0.000000, -1.000000, 0.000000, 0.000000
+			ambient: 2.540625, 1.525000, 2.926800, 1.000000
+			diffuse: 1.000000, 1.000000, 1.000000, 0.000000
+			specular: 0.700000, 0.700000, 0.700000, 0.000000
+		}
+	}
+	gameObject
+	{
+		name: logo
+		pos: 0.128125, 6.525004, 2.112500
+		rot: 0.000000, 0.000000, 0.088458, 0.996080
+		clipType: box
+		clipSize: 1.000000, 1.000000, 1.000000
+		clipOffset: 0.000000, 0.000000, 0.000000
+		shader: logo
+		model: logo.obj
+	}
+	gameObject
+	{
+		name: menuBee
+		pos: 0.000000, 24.249996, -8.062500
+		rot: 0.000000, 0.000000, 0.000000, 1.000000
+		clipType: box
+		clipSize: 1.000000, 1.000000, 1.000000
+		clipOffset: 0.000000, 0.000000, 0.000000
+		model: enemyBee.obj
+	}
+}

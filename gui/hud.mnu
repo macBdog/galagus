@@ -1,0 +1,94 @@
+menu
+{
+	name: HUD
+	widget
+	{
+		name: lives
+		text: 1UP
+		colour: 255.000000, 0.000000, 0.000000, 255.000000
+		font: hacker
+		fontSize: 4.818573
+		offset: -0.235937, 1.000000
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: score
+		text: 4000 PTS
+		colour: 255.000000, 0.000000, 0.000000, 255.000000
+		font: hacker
+		fontSize: 4.818573
+		offset: 0.304687, 0.082500
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: playerLife1
+		text: 
+		colour: 255.000000, 0.000000, 0.000000, 255.000000
+		font: hacker
+		fontSize: 4.818573
+		offset: 0.404687, 0.082500
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: playerLife2
+		text: 
+		colour: 255.000000, 0.000000, 0.000000, 255.000000
+		font: hacker
+		fontSize: 4.818573
+		offset: 0.504687, 0.082500
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: pointsDisplay
+		text: 10000pts
+		colour: 1.000000, 1.000000, 1.000000, 1.000000
+		font: hacker
+		fontSize: 3.855790
+		offset: 0.806250, 0.797222
+		size: 0.350000, 0.350000
+		alignTo: HUD
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: highScore
+		text: 12345pts
+		colour: 1.000000, 1.000000, 1.000000, 1.000000
+		font: hacker
+		fontSize: 4.120792
+		offset: -0.806250, 0.786111
+		size: 0.350000, 0.350000
+		alignTo: HUD
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+}

@@ -1,0 +1,37 @@
+menu
+{
+	name: main
+	beginLoaded: true
+	widget
+	{
+		name: btnNewGame
+		text: Play
+		colour: 255.000000, 255.000000, 255.000000, 255.000000
+		font: hacker
+		fontSize: 4.818573
+		offset: -0.951563, 0.977778
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+		action: GUIOnClickNewGame
+	}
+	widget
+	{
+		name: btnSettings
+		text: Settings
+		colour: 255.000000, 255.000000, 255.000000, 255.000000
+		font: hacker
+		fontSize: 4.733786
+		offset: 0.087500, -0.260000
+		size: 0.350000, 0.350000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+		action: GUIOnClickSettings
+	}
+}

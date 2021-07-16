@@ -1,0 +1,8 @@
+gameObject
+{
+  name: enemyBug
+  model: enemyBug.obj
+  clipType: box
+  clipSize: 10.0, 10.0, 2.0
+  clipGroup: enemy
+}

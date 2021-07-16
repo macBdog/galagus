@@ -1,0 +1,27 @@
+scene
+{
+	name: gameover
+	beginLoaded: false
+	lighting
+	{
+		light
+		{
+			name: omni
+			pos: 0.000000, 2.000000, 0.000000
+			dir: 0.000000, -1.000000, 0.000000, 0.000000
+			ambient: 2.540625, 1.525000, 2.926800, 1.000000
+			diffuse: 1.000000, 1.000000, 1.000000, 0.000000
+			specular: 0.700000, 0.700000, 0.700000, 0.000000
+		}
+	}
+	gameObject
+	{
+		name: menuBug
+		pos: 0.000000, 24.249996, -4.062500
+		rot: 0.000000, 0.000000, 0.000000, 1.000000
+		clipType: box
+		clipSize: 1.000000, 1.000000, 1.000000
+		clipOffset: 0.000000, 0.000000, 0.000000
+		model: enemyBug.obj
+	}
+}

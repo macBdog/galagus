@@ -1,0 +1,66 @@
+menu
+{
+	name: gameover
+	widget
+	{
+		name: gameover_title
+		text: GameOverYEAAA
+		colour: 255.000000, 255.000000, 255.000000, 255.000000
+		font: hacker
+		fontSize: 6.000000
+		offset: 0.012500, 0.836111
+		size: 0.918751, 0.225000
+		alignTo: main
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: highscoretitle
+		text: HIGHSCORES
+		colour: 0.855555, 0.382527, 0.426344, 1.000000
+		font: hacker
+		fontSize: 2.956398
+		offset: -0.018750, 0.586111
+		size: 0.351563, 0.116667
+		alignTo: gameover
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+	}
+	widget
+	{
+		name: BtnPlayAgain
+		text: PlayAgain
+		colour: 1.000000, 1.000000, 1.000000, 1.000000
+		font: default
+		fontSize: 4.270400
+		offset: 0.018750, -0.777778
+		size: 0.350000, 0.350000
+		alignTo: gameover
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+		action: GUIOnClickNewGame()
+	}
+	widget
+	{
+		name: NEW_WIDGET
+		text: 
+		colour: 1.000000, 1.000000, 1.000000, 1.000000
+		font: default
+		fontSize: 1.000000
+		offset: -0.948438, 0.452778
+		size: 0.350000, 0.350000
+		alignTo: gameover
+		alignX: middle
+		alignY: centre
+		alignAnchorX: middle
+		alignAnchorY: centre
+		texture: missile.tga
+	}
+}

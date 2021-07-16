@@ -1,0 +1,8 @@
+gameObject
+{
+  name: enemyBee
+  model: enemyBee.obj
+  clipType: box
+  clipSize: 10.0, 10.0, 2.0
+  clipGroup: enemy
+}
