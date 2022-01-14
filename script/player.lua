@@ -30,7 +30,7 @@ function PlayerStartup()
 	player.gameObject = GameObject:Create("spaceFighter", "game")
 	player.gameObject:SetName("player")
 	player.gameObject:SetPosition(playerStartPosX, playerStartPosY, playerStartPosZ)
-  	player.gameObject:AddToCollisionWorld()
+  player.gameObject:AddToCollisionWorld()
 	player.gameObject:SetSleeping()
 
 	-- Create the two shots

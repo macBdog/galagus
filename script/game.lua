@@ -1,5 +1,5 @@
 package.path = package.path .. ";C:/Projects/Galagus/scripts/?.lua"
-require("debugging")
+--require("debugging")
 require("keyCodes")
 require("gamepadCodes")
 require("starfield")
@@ -10,11 +10,14 @@ require("enemy")
 require("gui")
 require("gameplay")
 
+local logo = {}
+local logoRot = 0.0
+
 function Startup()
 	-- TODO: seed the random number generator
 	io.write("Game started\n")
 
-  DebuggingStartup(true)
+    --DebuggingStartup(true)
   
 	-- Initialise the game components
 	StarfieldStartup()
@@ -24,6 +27,8 @@ function Startup()
 	ExplosionsStartup()
 	GameplayStartup()
 	GUIStartup()
+
+	logo.gameObject = GameObject:Get("logo");
  
 	-- Main game loop
 	while Update() do 
@@ -35,11 +40,15 @@ end
 
 function Update()  
 	-- Update the simulation
+	local frameDt = GetFrameDelta()
 	GameplayUpdate()
 	GUIUpdate()
 
 	if GameplayIsMenuState() then
 		MenuStarfieldUpdate()
+
+		logoRot = logoRot + frameDt * 3.0
+		logo.gameObject:SetRotation(0.0, 0.0, math.sin(logoRot) * 20.0)
 	elseif GameplayIsGameState() then
 		StarfieldUpdate()
 		EnemyUpdate()
