@@ -1,0 +1,38 @@
+{
+  "menu": {
+    "name": "main",
+    "beginLoaded": true,
+    "widgets": [
+      {
+        "name": "btnNewGame",
+        "text": "Play",
+        "colour": [255.0, 255.0, 255.0, 255.0],
+        "font": "hacker",
+        "fontSize": 4.818573,
+        "offset": [-0.951563, 0.977778],
+        "size": [0.35, 0.35],
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "action": "GUIOnClickNewGame"
+      },
+      {
+        "name": "btnSettings",
+        "text": "Settings",
+        "colour": [255.0, 255.0, 255.0, 255.0],
+        "font": "hacker",
+        "fontSize": 4.733786,
+        "offset": [0.0875, -0.26],
+        "size": [0.35, 0.35],
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "action": "GUIOnClickSettings"
+      }
+    ]
+  }
+}

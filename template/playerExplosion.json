@@ -1,0 +1,7 @@
+{
+  "gameObject": {
+    "name": "playerExplosion",
+    "model": "playerExplosion.obj",
+    "shader": "explosion"
+  }
+}

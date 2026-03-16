@@ -1,0 +1,7 @@
+{
+  "gameObject": {
+    "name": "enemyExplosion",
+    "model": "enemyExplosion.obj",
+    "shader": "explosion"
+  }
+}

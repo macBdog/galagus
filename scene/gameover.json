@@ -1,0 +1,27 @@
+{
+  "scene": {
+    "name": "gameover",
+    "beginLoaded": false,
+    "lighting": [
+      {
+        "name": "omni",
+        "pos": [0.0, 2.0, 0.0],
+        "dir": [0.0, -1.0, 0.0, 0.0],
+        "ambient": [2.540625, 1.525, 2.9268, 1.0],
+        "diffuse": [1.0, 1.0, 1.0, 0.0],
+        "specular": [0.7, 0.7, 0.7, 0.0]
+      }
+    ],
+    "gameObjects": [
+      {
+        "name": "menuBug",
+        "pos": [0.0, 24.249996, -4.0625],
+        "rot": [0.0, 0.0, 0.0, 1.0],
+        "clipType": "box",
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipOffset": [0.0, 0.0, 0.0],
+        "model": "enemyBug.obj"
+      }
+    ]
+  }
+}
