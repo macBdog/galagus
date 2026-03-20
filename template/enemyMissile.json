@@ -1,0 +1,9 @@
+{
+  "gameObject": {
+    "name": "enemyMissile",
+    "model": "enemyMissile.obj",
+    "clipType": "box",
+    "clipSize": [1.0, 1.0, 1.0],
+    "clipGroup": "enemyShots"
+  }
+}

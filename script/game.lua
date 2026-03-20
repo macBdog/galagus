@@ -13,12 +13,19 @@ require("gameplay")
 local logo = {}
 local logoRot = 0.0
 
+local menuPos = 0
+local menuSpacing = 3.0
+local menuKeyUp = 0
+local menuKeyDown = 0
+local menuFocusLeft = {}
+local menuFocusRight = {}
+
 function Startup()
 	-- TODO: seed the random number generator
 	io.write("Game started\n")
 
-    --DebuggingStartup(true)
-  
+	--DebuggingStartup(true)
+
 	-- Initialise the game components
 	StarfieldStartup()
 	MenuStarfieldStartup()
@@ -29,6 +36,8 @@ function Startup()
 	GUIStartup()
 
 	logo.gameObject = GameObject:Get("logo");
+	menuFocusLeft.gameObject = GameObject:Get("menuBeeLeft")
+	menuFocusRight.gameObject = GameObject:Get("menuBeeRight")
  
 	-- Main game loop
 	while Update() do 
@@ -38,7 +47,7 @@ function Startup()
 	Shutdown()
 end
 
-function Update()  
+function Update()
 	-- Update the simulation
 	local frameDt = GetFrameDelta()
 	GameplayUpdate()
@@ -46,9 +55,33 @@ function Update()
 
 	if GameplayIsMenuState() then
 		MenuStarfieldUpdate()
+		
+		keyDownState = IsKeyDown(keyCodes.Down) or IsKeyDown(keyCodes.S)
+		if keyDownState then
+			if menuKeyDown == 0 then
+				menuKeyDown = 1
+				menuPos = menuPos - 1
+			end
+		else
+			menuKeyDown = 0
+		end
+		keyUpState = IsKeyDown(keyCodes.Up) or IsKeyDown(keyCodes.W)
+		if keyUpState then
+			if menuKeyUp == 0 then
+				menuKeyUp = 1
+				menuPos = menuPos + 1
+			end
+		else
+			menuKeyUp = 0
+		end
 
 		logoRot = logoRot + frameDt * 3.0
 		logo.gameObject:SetRotation(0.0, 0.0, math.sin(logoRot) * 20.0)
+		menuFocusLeft.gameObject:SetRotation(0.0, 0.0, logoRot * 100.0)
+		menuFocusRight.gameObject:SetRotation(0.0, 0.0, logoRot * -100.0)
+		menuFocusLeft.gameObject:SetPosition(-10.0, 24.24, -5.0 + menuPos * menuSpacing)
+		menuFocusRight.gameObject:SetPosition(10.0, 24.24, -5.0 + menuPos * menuSpacing)
+
 	elseif GameplayIsGameState() then
 		StarfieldUpdate()
 		EnemyUpdate()

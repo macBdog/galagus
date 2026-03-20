@@ -1,0 +1,57 @@
+{
+  "menu": {
+    "beginLoaded": true,
+    "name": "main",
+    "widgets": [
+      {
+        "name": "btnNewGame",
+        "action": "GUIOnClickNewGame",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [255.0, 255.0, 255.0, 255.0],
+        "font": "hacker",
+        "fontSize": 4.818572998046875,
+        "offset": [-0.95, 0.93],
+        "size": [0.35, 0.35],
+        "text": "play"
+      },
+      {
+        "name": "btnSettings",
+        "action": "GUIOnClickSettings",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [255.0, 255.0, 255.0, 255.0],
+        "font": "hacker",
+        "fontSize": 4.8,
+        "offset": [-1.03, 0.73],
+        "size": [0.35, 0.35],
+        "text": "options"
+      },
+      {
+        "name": "btnQuit",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.8,
+        "offset": [-0.94, 0.53],
+        "size": [0.35, 0.35],
+        "text": "quit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "gameObject": {
+    "name": "star",
+    "model": "star.obj",
+    "shader": "star"
+  }
+}

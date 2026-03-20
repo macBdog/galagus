@@ -1,0 +1,65 @@
+{
+  "menu": {
+    "name": "gameover",
+    "widgets": [
+      {
+        "name": "gameover_title",
+        "text": "GameOverYEAAA",
+        "colour": [255.0, 255.0, 255.0, 255.0],
+        "font": "hacker",
+        "fontSize": 6.0,
+        "offset": [0.0125, 0.836111],
+        "size": [0.918751, 0.225],
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre"
+      },
+      {
+        "name": "highscoretitle",
+        "text": "HIGHSCORES",
+        "colour": [0.855555, 0.382527, 0.426344, 1.0],
+        "font": "hacker",
+        "fontSize": 2.956398,
+        "offset": [-0.01875, 0.586111],
+        "size": [0.351563, 0.116667],
+        "alignTo": "gameover",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre"
+      },
+      {
+        "name": "BtnPlayAgain",
+        "text": "PlayAgain",
+        "colour": [1.0, 1.0, 1.0, 1.0],
+        "font": "default",
+        "fontSize": 4.2704,
+        "offset": [0.01875, -0.777778],
+        "size": [0.35, 0.35],
+        "alignTo": "gameover",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "action": "GUIOnClickNewGame()"
+      },
+      {
+        "name": "NEW_WIDGET",
+        "text": "",
+        "colour": [1.0, 1.0, 1.0, 1.0],
+        "font": "default",
+        "fontSize": 1.0,
+        "offset": [-0.948438, 0.452778],
+        "size": [0.35, 0.35],
+        "alignTo": "gameover",
+        "alignX": "middle",
+        "alignY": "centre",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "texture": "missile.tga"
+      }
+    ]
+  }
+}

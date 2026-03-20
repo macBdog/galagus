@@ -1,0 +1,109 @@
+{
+  "scene": {
+    "name": "menu",
+    "beginLoaded": true,
+    "gameObjects": [
+      {
+        "clipOffset": [0.0, 0.0, 0.0],
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "logo.obj",
+        "name": "logo",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          0.12812499701976776,
+          6.525003910064697,
+          2.112499952316284
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.06794964522123337,
+          0.9976887702941895
+        ],
+        "shader": "logo"
+      },
+      {
+        "clipOffset": [0.0, 0.0, 0.0],
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "enemyBee.obj",
+        "name": "menuBeeLeft",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          -10.0,
+          24.239999771118164,
+          1.940000057220459
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.7518399357795715,
+          0.6593456864356995
+        ]
+      },
+      {
+        "name": "menuBeeRight",
+        "clipOffset": [0.0, 0.0, 0.0],
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "enemyBug.obj",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          10.0,
+          24.239999771118164,
+          1.940000057220459
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.7518399357795715,
+          0.6593456864356995
+        ]
+      }
+    ],
+    "lighting": [
+      {
+        "ambient": [
+          2.5406250953674316,
+          1.524999976158142,
+          2.926800012588501,
+          1.0
+        ],
+        "diffuse": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "dir": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "name": "omni",
+        "pos": [
+          0.0,
+          2.0,
+          0.0
+        ],
+        "specular": [
+          0.699999988079071,
+          0.699999988079071,
+          0.699999988079071,
+          0.0
+        ]
+      }
+    ]
+  }
+}

@@ -12,9 +12,9 @@ local states = {
 	["startup"] = 0,
 	["menu"] = 1,
 	["game"] = 2,
-  ["death"] = 3,
-  ["gameover"] = 4,
-  ["win"] = 5,
+	["death"] = 3,
+	["gameover"] = 4,
+	["win"] = 5,
 	["highscore"] = 6,
 }
 
