@@ -2,35 +2,107 @@
   "scene": {
     "name": "menu",
     "beginLoaded": true,
-    "lighting": [
-      {
-        "name": "omni",
-        "pos": [0.0, 2.0, 0.0],
-        "dir": [0.0, -1.0, 0.0, 0.0],
-        "ambient": [2.540625, 1.525, 2.9268, 1.0],
-        "diffuse": [1.0, 1.0, 1.0, 0.0],
-        "specular": [0.7, 0.7, 0.7, 0.0]
-      }
-    ],
     "gameObjects": [
       {
-        "name": "logo",
-        "pos": [0.128125, 6.525004, 2.1125],
-        "rot": [0.0, 0.0, 0.088458, 0.99608],
-        "clipType": "box",
-        "clipSize": [1.0, 1.0, 1.0],
         "clipOffset": [0.0, 0.0, 0.0],
-        "shader": "logo",
-        "model": "logo.obj"
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "logo.obj",
+        "name": "logo",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          0.12812499701976776,
+          6.525003910064697,
+          2.112499952316284
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.06794964522123337,
+          0.9976887702941895
+        ],
+        "shader": "logo"
       },
       {
-        "name": "menuBee",
-        "pos": [0.0, 24.249996, -8.0625],
-        "rot": [0.0, 0.0, 0.0, 1.0],
-        "clipType": "box",
-        "clipSize": [1.0, 1.0, 1.0],
         "clipOffset": [0.0, 0.0, 0.0],
-        "model": "enemyBee.obj"
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "enemyBee.obj",
+        "name": "menuBeeLeft",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          -10.0,
+          24.239999771118164,
+          1.940000057220459
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.7518399357795715,
+          0.6593456864356995
+        ]
+      },
+      {
+        "name": "menuBeeRight",
+        "clipOffset": [0.0, 0.0, 0.0],
+        "clipSize": [1.0, 1.0, 1.0],
+        "clipType": "box",
+        "model": "enemyBug.obj",
+        "physicsAngularDrag": 1.0,
+        "physicsElasticity": 1.0,
+        "physicsLinearDrag": 1.0,
+        "physicsMass": 1.0,
+        "pos": [
+          10.0,
+          24.239999771118164,
+          1.940000057220459
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.7518399357795715,
+          0.6593456864356995
+        ]
+      }
+    ],
+    "lighting": [
+      {
+        "ambient": [
+          2.5406250953674316,
+          1.524999976158142,
+          2.926800012588501,
+          1.0
+        ],
+        "diffuse": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "dir": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "name": "omni",
+        "pos": [
+          0.0,
+          2.0,
+          0.0
+        ],
+        "specular": [
+          0.699999988079071,
+          0.699999988079071,
+          0.699999988079071,
+          0.0
+        ]
       }
     ]
   }

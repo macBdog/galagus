@@ -1,4 +1,7 @@
 {
+  "menu": {
+    "name": "gui"
+  },
   "config": {
     "mouseCursorTexture": "cursor.tga"
   }
