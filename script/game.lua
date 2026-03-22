@@ -1,5 +1,5 @@
 package.path = package.path .. ";C:/Projects/Galagus/scripts/?.lua"
---require("debugging")
+require("debugging")
 require("keyCodes")
 require("gamepadCodes")
 require("starfield")
@@ -21,80 +21,80 @@ local menuFocusLeft = {}
 local menuFocusRight = {}
 
 function Startup()
-	-- TODO: seed the random number generator
-	io.write("Game started\n")
+    -- TODO: seed the random number generator
+    io.write("Game started\n")
 
-	--DebuggingStartup(true)
+    DebuggingStartup(true)
 
-	-- Initialise the game components
-	StarfieldStartup()
-	MenuStarfieldStartup()
-	EnemyStartup()
-	PlayerStartup()
-	ExplosionsStartup()
-	GameplayStartup()
-	GUIStartup()
+    -- Initialise the game components
+    StarfieldStartup()
+    MenuStarfieldStartup()
+    EnemyStartup()
+    PlayerStartup()
+    ExplosionsStartup()
+    GameplayStartup()
+    GUIStartup()
 
-	logo.gameObject = GameObject:Get("logo");
-	menuFocusLeft.gameObject = GameObject:Get("menuBeeLeft")
-	menuFocusRight.gameObject = GameObject:Get("menuBeeRight")
- 
-	-- Main game loop
-	while Update() do 
-		Yield()
-	end
+    logo.gameObject = GameObject:Get("logo");
+    menuFocusLeft.gameObject = GameObject:Get("menuBeeLeft")
+    menuFocusRight.gameObject = GameObject:Get("menuBeeRight")
 
-	Shutdown()
+    -- Main game loop
+    while Update() do 
+        Yield()
+    end
+
+    Shutdown()
 end
 
 function Update()
-	-- Update the simulation
-	local frameDt = GetFrameDelta()
-	GameplayUpdate()
-	GUIUpdate()
+    -- Update the simulation
+    local frameDt = GetFrameDelta()
+    GameplayUpdate()
+    GUIUpdate()
 
-	if GameplayIsMenuState() then
-		MenuStarfieldUpdate()
-		
-		keyDownState = IsKeyDown(keyCodes.Down) or IsKeyDown(keyCodes.S)
-		if keyDownState then
-			if menuKeyDown == 0 then
-				menuKeyDown = 1
-				menuPos = menuPos - 1
-			end
-		else
-			menuKeyDown = 0
-		end
-		keyUpState = IsKeyDown(keyCodes.Up) or IsKeyDown(keyCodes.W)
-		if keyUpState then
-			if menuKeyUp == 0 then
-				menuKeyUp = 1
-				menuPos = menuPos + 1
-			end
-		else
-			menuKeyUp = 0
-		end
+    if GameplayIsMenuState() then
+        MenuStarfieldUpdate()
 
-		logoRot = logoRot + frameDt * 3.0
-		logo.gameObject:SetRotation(0.0, 0.0, math.sin(logoRot) * 20.0)
-		menuFocusLeft.gameObject:SetRotation(0.0, 0.0, logoRot * 100.0)
-		menuFocusRight.gameObject:SetRotation(0.0, 0.0, logoRot * -100.0)
-		menuFocusLeft.gameObject:SetPosition(-10.0, 24.24, -5.0 + menuPos * menuSpacing)
-		menuFocusRight.gameObject:SetPosition(10.0, 24.24, -5.0 + menuPos * menuSpacing)
+        keyDownState = IsKeyDown(keyCodes.Down) or IsKeyDown(keyCodes.S)
+        if keyDownState then
+            if menuKeyDown == 0 then
+                menuKeyDown = 1
+                menuPos = math.min(menuPos + 1, 2)
+            end
+        else
+            menuKeyDown = 0
+        end
+        keyUpState = IsKeyDown(keyCodes.Up) or IsKeyDown(keyCodes.W)
+        if keyUpState then
+            if menuKeyUp == 0 then
+                menuKeyUp = 1
+                menuPos = math.max(0, menuPos - 1)
+            end
+        else
+            menuKeyUp = 0
+        end
 
-	elseif GameplayIsGameState() then
-		StarfieldUpdate()
-		EnemyUpdate()
-		PlayerUpdate()
-		ExplosionsUpdate()
-	end
-	
-	return true
+        logoRot = logoRot + frameDt * 3.0
+        logo.gameObject:SetRotation(0.0, 0.0, math.sin(logoRot) * 20.0)
+        menuFocusLeft.gameObject:SetRotation(0.0, 0.0, logoRot * 100.0)
+        menuFocusRight.gameObject:SetRotation(0.0, 0.0, logoRot * -100.0)
+        menuFocusLeft.gameObject:SetPosition(-10.0, 24.24, menuPos * menuSpacing * -1.0)
+        menuFocusRight.gameObject:SetPosition(10.0, 24.24, menuPos * menuSpacing * -1.0)
+
+    elseif GameplayIsGameState() then
+        StarfieldUpdate()
+        EnemyUpdate()
+        PlayerUpdate()
+        ExplosionsUpdate()
+    end
+    
+    return true
 end
 
 function Shutdown()
-	StarfieldShutdown()
-	io.write("Game shutdown.\n")
+    StarfieldShutdown()
+    io.write("Game shutdown.\n")
 end
 
 Startup()
