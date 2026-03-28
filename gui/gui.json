@@ -3,6 +3,6 @@
     "name": "gui"
   },
   "config": {
-    "mouseCursorTexture": "cursor.tga"
+    "mouseCursorTexture": "tex/cursor.tga"
   }
 }

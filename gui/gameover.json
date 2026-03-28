@@ -3,62 +3,80 @@
     "name": "gameover",
     "widgets": [
       {
-        "name": "gameover_title",
-        "text": "GameOverYEAAA",
-        "colour": [255.0, 255.0, 255.0, 255.0],
-        "font": "hacker",
-        "fontSize": 6.0,
-        "offset": [0.0125, 0.836111],
-        "size": [0.918751, 0.225],
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "main",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
-      },
-      {
-        "name": "highscoretitle",
-        "text": "HIGHSCORES",
-        "colour": [0.855555, 0.382527, 0.426344, 1.0],
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
         "font": "hacker",
-        "fontSize": 2.956398,
-        "offset": [-0.01875, 0.586111],
-        "size": [0.351563, 0.116667],
+        "fontSize": 6.0,
+        "name": "gameover_title",
+        "offset": [
+          -0.9984375238418579,
+          1.0
+        ],
+        "size": [
+          0.9281250238418579,
+          0.2055554986000061
+        ],
+        "text": "GameOverYEAAA"
+      },
+      {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "gameover",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
+        "colour": [
+          0.85555499792099,
+          0.3825269937515259,
+          0.42634400725364685,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 2.9563980102539063,
+        "name": "highscoretitle",
+        "offset": [
+          -0.01875000074505806,
+          0.5861110091209412
+        ],
+        "size": [
+          0.3515630066394806,
+          0.1166670024394989
+        ],
+        "text": "HIGHSCORES"
       },
       {
+        "action": "GUIOnClickNewGame()",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "gameover",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.270400047302246,
         "name": "BtnPlayAgain",
-        "text": "PlayAgain",
-        "colour": [1.0, 1.0, 1.0, 1.0],
-        "font": "default",
-        "fontSize": 4.2704,
-        "offset": [0.01875, -0.777778],
-        "size": [0.35, 0.35],
-        "alignTo": "gameover",
-        "alignX": "middle",
-        "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre",
-        "action": "GUIOnClickNewGame()"
-      },
-      {
-        "name": "NEW_WIDGET",
-        "text": "",
-        "colour": [1.0, 1.0, 1.0, 1.0],
-        "font": "default",
-        "fontSize": 1.0,
-        "offset": [-0.948438, 0.452778],
-        "size": [0.35, 0.35],
-        "alignTo": "gameover",
-        "alignX": "middle",
-        "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre",
-        "texture": "missile.tga"
+        "offset": [
+          0.01875000074505806,
+          -0.7777780294418335
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": "PlayAgain"
       }
     ]
   }

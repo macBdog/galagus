@@ -4,22 +4,12 @@
     "beginLoaded": false,
     "lighting": [
       {
-        "name": "NEW_LIGHT",
+        "name": "gameplay_lighting",
         "pos": [0.0, 0.0, 0.0],
         "dir": [0.0, 0.0, 0.0, 0.0],
-        "ambient": [2.723437, 2.383333, 4.365797, 1.0],
+        "ambient": [2.723437, 2.383333, 2.365797, 1.0],
         "diffuse": [0.75, 0.75, 0.75, 0.75],
         "specular": [1.607812, 1.525, 1.636895, 1.0]
-      }
-    ],
-    "gameObjects": [
-      {
-        "name": "NEW_GAME_OBJECT",
-        "pos": [0.0, 0.0, 0.0],
-        "rot": [0.0, 0.0, 0.0, 1.0],
-        "clipType": "axisbox",
-        "clipSize": [1.0, 1.0, 1.0],
-        "clipOffset": [0.0, 0.0, 0.0]
       }
     ]
   }

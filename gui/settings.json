@@ -1,5 +1,29 @@
 {
   "menu": {
-    "name": "settings"
+    "name": "settings",
+    "widgets": {
+      "alignAnchorX": "middle",
+      "alignAnchorY": "centre",
+      "alignX": "middle",
+      "alignY": "centre",
+      "colour": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "font": "default",
+      "fontSize": 1.0,
+      "name": "NEW_WIDGET",
+      "offset": [
+        0.8203125,
+        0.5083333253860474
+      ],
+      "size": [
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "text": ""
+    }
   }
 }

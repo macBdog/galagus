@@ -3,88 +3,154 @@
     "name": "HUD",
     "widgets": [
       {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.818572998046875,
         "name": "lives",
-        "text": "1UP",
-        "colour": [255.0, 0.0, 0.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.818573,
-        "offset": [-0.235937, 1.0],
-        "size": [0.35, 0.35],
+        "offset": [
+          -0.10000002384185791,
+          0.18611109256744385
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": "2UP"
+      },
+      {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "main",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
-      },
-      {
+        "colour": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.818572998046875,
         "name": "score",
-        "text": "4000 PTS",
-        "colour": [255.0, 0.0, 0.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.818573,
-        "offset": [0.304687, 0.0825],
-        "size": [0.35, 0.35],
+        "offset": [
+          0.3046869933605194,
+          0.08250000327825546
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": "5400 PTS"
+      },
+      {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "main",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
-      },
-      {
+        "colour": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.818572998046875,
         "name": "playerLife1",
-        "text": "",
-        "colour": [255.0, 0.0, 0.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.818573,
-        "offset": [0.404687, 0.0825],
-        "size": [0.35, 0.35],
+        "offset": [
+          0.40468698740005493,
+          0.08250000327825546
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": ""
+      },
+      {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "main",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
-      },
-      {
+        "colour": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.818572998046875,
         "name": "playerLife2",
-        "text": "",
-        "colour": [255.0, 0.0, 0.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.818573,
-        "offset": [0.504687, 0.0825],
-        "size": [0.35, 0.35],
-        "alignTo": "main",
-        "alignX": "middle",
-        "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
+        "offset": [
+          0.5046870112419128,
+          0.08250000327825546
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": ""
       },
       {
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "HUD",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 3.85578989982605,
         "name": "pointsDisplay",
-        "text": "10000pts",
-        "colour": [1.0, 1.0, 1.0, 1.0],
-        "font": "hacker",
-        "fontSize": 3.85579,
-        "offset": [0.80625, 0.797222],
-        "size": [0.35, 0.35],
-        "alignTo": "HUD",
-        "alignX": "middle",
-        "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
+        "offset": [
+          0.8062499761581421,
+          0.7972220182418823
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": "10000pts"
       },
       {
-        "name": "highScore",
-        "text": "12345pts",
-        "colour": [1.0, 1.0, 1.0, 1.0],
-        "font": "hacker",
-        "fontSize": 4.120792,
-        "offset": [-0.80625, 0.786111],
-        "size": [0.35, 0.35],
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
         "alignTo": "HUD",
         "alignX": "middle",
         "alignY": "centre",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre"
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.120791912078857,
+        "name": "highScore",
+        "offset": [
+          -0.8062499761581421,
+          0.7861109972000122
+        ],
+        "size": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "text": "12345pts"
       }
     ]
   }

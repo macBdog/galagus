@@ -4,37 +4,7 @@
     "name": "main",
     "widgets": [
       {
-        "name": "btnNewGame",
         "action": "GUIOnClickNewGame",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre",
-        "alignTo": "main",
-        "alignX": "middle",
-        "alignY": "centre",
-        "colour": [255.0, 255.0, 255.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.818572998046875,
-        "offset": [-0.95, 0.93],
-        "size": [0.35, 0.35],
-        "text": "play"
-      },
-      {
-        "name": "btnSettings",
-        "action": "GUIOnClickSettings",
-        "alignAnchorX": "middle",
-        "alignAnchorY": "centre",
-        "alignTo": "main",
-        "alignX": "middle",
-        "alignY": "centre",
-        "colour": [255.0, 255.0, 255.0, 255.0],
-        "font": "hacker",
-        "fontSize": 4.8,
-        "offset": [-1.03, 0.73],
-        "size": [0.35, 0.35],
-        "text": "options"
-      },
-      {
-        "name": "btnQuit",
         "alignAnchorX": "middle",
         "alignAnchorY": "centre",
         "alignTo": "main",
@@ -47,9 +17,68 @@
           1.0
         ],
         "font": "hacker",
-        "fontSize": 4.8,
-        "offset": [-0.94, 0.53],
-        "size": [0.35, 0.35],
+        "fontSize": 4.818572998046875,
+        "name": "btnNewGame",
+        "offset": [
+          -1.0,
+          1.0
+        ],
+        "size": [
+          0.17812496423721313,
+          0.20499998331069946
+        ],
+        "text": "play"
+      },
+      {
+        "action": "GUIOnClickSettings",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.800000190734863,
+        "name": "btnSettings",
+        "offset": [
+          -1.0,
+          0.7222222089767456
+        ],
+        "size": [
+          0.31593745946884155,
+          0.19388890266418457
+        ],
+        "text": "options"
+      },
+      {
+        "name": "btnQuit",
+        "action": "GUIOnClickQuit",
+        "alignAnchorX": "middle",
+        "alignAnchorY": "centre",
+        "alignTo": "main",
+        "alignX": "middle",
+        "alignY": "centre",
+        "colour": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "font": "hacker",
+        "fontSize": 4.800000190734863,
+        "offset": [
+          -1.0,
+          0.4444444179534912
+        ],
+        "size": [
+          0.16968750953674316,
+          0.18833333253860474
+        ],
         "text": "quit"
       }
     ]

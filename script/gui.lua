@@ -5,7 +5,18 @@ function GUIStartup()
     SetScene("menu")
 end
 
+function GUIOnClickQuit()
+    DebugLog("You can't quit when you're having so much fun!")
+end
+
 function GUIOnClickNewGame()
+    GameplayStartGameState()
+    GUI:SetActiveMenu("HUD")
+    GUI:DisableMouse()
+    SetScene("game")
+end
+
+function GUIOnClickPlayAgain()
     GameplayStartGameState()
     GUI:SetActiveMenu("HUD")
     GUI:DisableMouse()
@@ -14,6 +25,7 @@ end
 
 function GUIGameOver()
   GUI:SetActiveMenu("gameover")
+  GUI:EnableMouse()
   SetScene("gameover")
 end
 

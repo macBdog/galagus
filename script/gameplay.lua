@@ -110,6 +110,7 @@ end
 
 function GameplayStartGameState()
     DebugLog("Starting game state")
+    GUI:DisableMouse()
     state = states.game
     PlayerBeginLife()
 end
@@ -131,6 +132,7 @@ function GameplayNextGameState()
 end
 
 function GameplayBackToMenu()
+    GUI:EnableMouse()
     state = states.menu
 end
 

@@ -14,7 +14,7 @@ local logo = {}
 local logoRot = 0.0
 
 local menuPos = 0
-local menuSpacing = 3.0
+local menuSpacing = 4.0
 local menuKeyUp = 0
 local menuKeyDown = 0
 local menuFocusLeft = {}
