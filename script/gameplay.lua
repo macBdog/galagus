@@ -134,6 +134,7 @@ end
 function GameplayBackToMenu()
     GUI:EnableMouse()
     state = states.menu
+    ApplyMenuCamera()
 end
 
 function GameplayGetState()

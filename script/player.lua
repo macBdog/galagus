@@ -19,7 +19,7 @@ local shootPressed = false
 local scorePerEnemy = 100
 
 playerStartPosX = 0.0
-playerStartPosY = 95.0
+playerStartPosY = 55.0
 playerStartPosZ = -40.0
 
 function PlayerStartup()
@@ -38,7 +38,7 @@ function PlayerStartup()
 	activeShot = 1
 	for i = 1, maxShots do
 		shots[i] = {}
-		shots[i].ready	 = true
+		shots[i].ready = true
 		shots[i].active = false
 		shots[i].gameObject = GameObject:Create("missile", "game")
 		shots[i].gameObject:SetName("playerMissile" .. i)

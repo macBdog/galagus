@@ -20,6 +20,21 @@ local menuKeyDown = 0
 local menuFocusLeft = {}
 local menuFocusRight = {}
 
+-- Menu keeps the default top-down view; game tilts on X to show the playfield.
+local menuCameraPos = {0.0, 0.0, 0.0}
+local menuCameraRot = {0.0, 0.0, 0.0}
+local gameCameraPos = {0.0, 0.0, 0.0}
+local gameCameraRot = {math.rad(-15.0), 0.0, 0.0}
+
+function ApplyMenuCamera()
+    SetCameraPosition(menuCameraPos[1], menuCameraPos[2], menuCameraPos[3])
+    SetCameraRotation(menuCameraRot[1], menuCameraRot[2], menuCameraRot[3])
+end
+
+function ApplyGameCamera()
+    SetCameraPosition(gameCameraPos[1], gameCameraPos[2], gameCameraPos[3])
+    SetCameraRotation(gameCameraRot[1], gameCameraRot[2], gameCameraRot[3])
+end
 function Startup()
     -- TODO: seed the random number generator
     io.write("Game started\n")

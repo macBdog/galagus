@@ -3,6 +3,7 @@ function GUIStartup()
     GUI:SetActiveMenu("main")
     GUI:EnableMouse()
     SetScene("menu")
+    ApplyMenuCamera()
 end
 
 function GUIOnClickQuit()
@@ -15,6 +16,7 @@ function GUIOnClickNewGame()
     GUI:SetActiveMenu("HUD")
     GUI:DisableMouse()
     SetScene("game")
+    ApplyGameCamera()
 end
 
 function GUIOnClickPlayAgain()
@@ -23,12 +25,14 @@ function GUIOnClickPlayAgain()
     GUI:SetActiveMenu("HUD")
     GUI:DisableMouse()
     SetScene("game")
+    ApplyGameCamera()
 end
 
 function GUIGameOver()
   GUI:SetActiveMenu("gameover")
   GUI:EnableMouse()
   SetScene("gameover")
+  ApplyMenuCamera()
 end
 
 function GUIOnClickSettings()
