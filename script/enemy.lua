@@ -190,13 +190,18 @@ function EnemyDestroy(gameObject)
 	if foundEnemy ~= -1 then
 		enemies[foundEnemy].dead = true
 		enemies[foundEnemy].active = false
+		enemies[foundEnemy].gameObject:DisableCollision()
 		enemies[foundEnemy].gameObject:SetSleeping()
 		enemies[foundEnemy].timeOfDeath = enemies[foundEnemy].life
 		enemies[foundEnemy].deadPosX, enemies[foundEnemy].deadPosY, enemies[foundEnemy].deadPosZ = enemies[foundEnemy].gameObject:GetPosition()
 	
 		-- Explosion to show the player the enemy is dead
 		ExplosionEnemy(enemies[foundEnemy].deadPosX, enemies[foundEnemy].deadPosY, enemies[foundEnemy].deadPosZ)
+		PlayerScoreEnemyKill()
+		return true
 	end
+
+	return false
 end
 
 function EnemySpawn(homePositionId, fireRateMin, fireRateMax)
@@ -209,6 +214,15 @@ function EnemySpawn(homePositionId, fireRateMin, fireRateMax)
 		-- Set fire rate and randomise starting timer
 		enemies[homePositionId].fireRate = fireRateMin + math.random(0, fireRateMax - fireRateMin)
 		enemies[homePositionId].fireTimer = math.random(0, enemies[homePositionId].fireRate)
+	end
+end
+
+function EnemyClearShots()
+	for i = 1, maxShots do
+		if shots[i].gameObject and shots[i].gameObject:IsActive() then
+			shots[i].gameObject:SetSleeping()
+			shots[i].gameObject:DisableCollision()
+		end
 	end
 end
 

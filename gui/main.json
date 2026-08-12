@@ -56,7 +56,6 @@
         "text": "options"
       },
       {
-        "name": "btnQuit",
         "action": "GUIOnClickQuit",
         "alignAnchorX": "middle",
         "alignAnchorY": "centre",
@@ -71,9 +70,10 @@
         ],
         "font": "hacker",
         "fontSize": 4.800000190734863,
+        "name": "btnQuit",
         "offset": [
           -1.0,
-          0.4444444179534912
+          0.43611109256744385
         ],
         "size": [
           0.16968750953674316,

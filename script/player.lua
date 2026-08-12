@@ -19,13 +19,14 @@ local shootPressed = false
 local scorePerEnemy = 100
 
 playerStartPosX = 0.0
-playerStartPosY = 65.0
-playerStartPosZ = -25.0
+playerStartPosY = 95.0
+playerStartPosZ = -40.0
 
 function PlayerStartup()
 	-- Create the player's ship
 	player.health = 100
 	player.score = 0
+	player.highScore = 0
 	player.lives = playerMaxLives
 	player.gameObject = GameObject:Create("spaceFighter", "game")
 	player.gameObject:SetName("player")
@@ -50,6 +51,31 @@ end
 function PlayerBeginLife()
   player.gameObject:SetActive()
   player.gameObject:EnableCollision()
+end
+
+function PlayerStartNewGame()
+	player.score = 0
+	player.lives = playerMaxLives
+	player.gameObject:SetPosition(playerStartPosX, playerStartPosY, playerStartPosZ)
+	rollAmount = 0
+	activeShot = 1
+	for i = 1, maxShots do
+		shots[i].ready = true
+		shots[i].active = false
+		shots[i].gameObject:SetPosition(0.0, shotStartPosY, 0.0)
+		shots[i].gameObject:DisableCollision()
+	end
+end
+
+function PlayerAddScore(points)
+	player.score = (player.score or 0) + points
+	if player.score > (player.highScore or 0) then
+		player.highScore = player.score
+	end
+end
+
+function PlayerScoreEnemyKill()
+	PlayerAddScore(scorePerEnemy)
 end
 
 function PlayerUpdate()
@@ -122,9 +148,9 @@ function PlayerUpdate()
 			local shotCollisions = shots[i].gameObject:GetCollisions()
 			for colCount = 1, #shotCollisions do
 				local gameObj = shotCollisions[colCount]
-				EnemyDestroy(gameObj)
-				player.score = player.score + scorePerEnemy
-				shotDestroyed = true
+				if EnemyDestroy(gameObj) then
+					shotDestroyed = true
+				end
 			end
 
 			-- Destroy shots that have gone too far
@@ -150,6 +176,10 @@ function PlayerGetScore()
 	return player.score or 0
 end
 
+function PlayerGetHighScore()
+	return player.highScore or 0
+end
+
 function PlayerGetLives()
 	return math.max(player.lives, 0)
 end
@@ -167,5 +197,6 @@ function PlayerDestroy()
 	player.lives = player.lives - 1
   	player.gameObject:DisableCollision()
   	player.gameObject:SetSleeping()
+	EnemyClearShots()
   	GameplayDeathState()
 end

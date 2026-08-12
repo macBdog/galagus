@@ -10,6 +10,7 @@ function GUIOnClickQuit()
 end
 
 function GUIOnClickNewGame()
+    PlayerStartNewGame()
     GameplayStartGameState()
     GUI:SetActiveMenu("HUD")
     GUI:DisableMouse()
@@ -17,6 +18,7 @@ function GUIOnClickNewGame()
 end
 
 function GUIOnClickPlayAgain()
+    PlayerStartNewGame()
     GameplayStartGameState()
     GUI:SetActiveMenu("HUD")
     GUI:DisableMouse()
@@ -45,8 +47,11 @@ function GUIUpdate()
             GUI:Activate("btnNewGame")
         end
     else
-        local scoreString = PlayerGetScore() .. " PTS"
-        GUI:SetValue("score", scoreString)
+        local score = PlayerGetScore()
+        local highScore = PlayerGetHighScore()
+        GUI:SetValue("pointsDisplay", score .. "pts")
+        GUI:SetValue("score", score .. " PTS")
+        GUI:SetValue("highScore", highScore .. "pts")
 
         local numLives = PlayerGetLives() - 1
         local livesString = numLives .. "UP"
