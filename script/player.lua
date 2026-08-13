@@ -50,6 +50,7 @@ end
 
 function PlayerBeginLife()
   player.gameObject:SetActive()
+  player.gameObject:AddToCollisionWorld()
   player.gameObject:EnableCollision()
 end
 

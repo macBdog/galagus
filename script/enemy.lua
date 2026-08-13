@@ -145,19 +145,20 @@ function EnemyUpdate()
 	-- Move enemy shots through space
 	for i = 1, maxShots do 
 		if shots[i].gameObject and shots[i].gameObject:IsActive() then
-			local sX,sY,sZ = shots[i].gameObject:GetPosition()
+			local sX, sY, sZ = shots[i].gameObject:GetPosition()
 			shots[i].gameObject:SetPosition(sX, sY - (frameDt * shotSpeed), sZ)
-
-			-- TODO lerp shots towards player with a factor of hardness
-			--local targetPosX, targetPosY, targetPosZ = GameplayGetHardness() * 
 
 			-- Test shot collision
 			local shotDestroyed = false
 			local shotCollisions = shots[i].gameObject:GetCollisions()
+			local playerId = PlayerGet().gameObject:GetId()
 			for colCount = 1, #shotCollisions do
 				local gameObj = shotCollisions[colCount]
-				shotDestroyed = true
-				PlayerDestroy()
+				if gameObj:GetId() == playerId then
+					shotDestroyed = true
+					PlayerDestroy()
+					break
+				end
 			end
 
 			-- Destroy shots that have gone too far
@@ -243,7 +244,8 @@ function EnemyFire(enemyTable)
 			local enemyPosX, enemyPosY, enemyPosZ = enemyTable.gameObject:GetPosition()	
 			shots[i].gameObject:SetName("enemyMissile" .. i)
 			shots[i].targetPosX, shots[i].targetPosY, shots[i].targetPosZ = PlayerGet().gameObject:GetPosition()
-			shots[i].gameObject:SetPosition(enemyPosX, enemyPosY, enemyPosZ)  
+			shots[i].gameObject:SetPosition(enemyPosX, enemyPosY, enemyPosZ)
+			shots[i].gameObject:AddToCollisionWorld()
       break
 		end
 	end
